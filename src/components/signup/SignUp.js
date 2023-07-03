@@ -10,6 +10,8 @@ function SignUp() {
     const [passwd, setPasswd] = useState('');
     const [confPasswd, setConfPasswd]= useState('');
     const [valid, setValid] = useState(false);
+    const [logged, setLogged] = useState('');
+
 
     useEffect(() => {
         setValid(email && emailRegex.test(email) && passwd && confPasswd && passwd === confPasswd)
@@ -43,9 +45,13 @@ function SignUp() {
         <GoogleLogin
             onSuccess={credentialResponse => {
               const decodeVal = jwt_decode(credentialResponse.credential);
+              setLogged('True');
+              document.write("LOGIN SUCCESSFUL");
               console.log(decodeVal);
             }}
             onError={() => {
+              setLogged("False")
+              document.write("LOGIN FAILED");
               console.log('Login Failed');
             }}
         />
