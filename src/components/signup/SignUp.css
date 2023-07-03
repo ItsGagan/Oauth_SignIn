@@ -1,0 +1,35 @@
+* {
+    
+    margin: 0 auto;
+    width: 650px;
+    max-width: 95%;
+}
+
+.SignupPage {
+    padding-top: 15px;
+}
+
+.value {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.submit {
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: greenyellow;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: gray;
+}
